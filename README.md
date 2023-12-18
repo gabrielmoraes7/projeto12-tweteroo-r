@@ -1,8 +1,5 @@
-# React + Vite
+Projeto 12 - Tweteroo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Construção de uma API para aplicativo de mensagens curtas(tweets)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Baseado em Cadastrar usuario e seu avatar, representado pela rola rota /sign-up, uma rota de POST, seguido da capacidade do usuario cadastrado poder fazer seus proprios tweets, representado pela rota POST de /tweets e por fim a exibição dos tweets dos multiplos usuarios, representado pela rota GET /tweets.
