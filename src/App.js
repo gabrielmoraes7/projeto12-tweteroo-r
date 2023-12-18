@@ -26,7 +26,9 @@ const tweets = [];
   }
   );
 
+
   // POST /tweets
+  //Rota com a finalidade de postar os Tweets do usuario
   app.post("/tweets", (req, res) => {
 
     //Corpo do tweet
@@ -41,6 +43,20 @@ const tweets = [];
     //Posta o tweet
     tweets.push({ username, tweet });
     res.send("OK");
+});
+  
+//GET: /tweets
+
+app.get("/tweets", (req, res) => {
+
+  //formação do corpo dos tweets que serão exibidos, usando o nome advindo do proprio tweet como referencia para buscar o avatar do usuario para a exbição destas 3 informações no formato do tweet(user name, avatar e o proprio tweet)
+  const completeTweets = tweets.map((tweet) => {
+      const user = users.find((user) => user.username === tweet.username);
+      return { ...tweet, avatar: user.avatar }
+  })
+
+  //Coloca a resposta da GET como sendo os ultimos 10 tweets publicados
+  res.send(completeTweets.slice(-10).reverse());
 });
 
 //Conexão ao servidor na porta 5000
