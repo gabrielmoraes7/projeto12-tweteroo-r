@@ -1,4 +1,4 @@
-Projeto 12 - Tweteroo
+Projeto 12 - Tweteroo API
 
 Construção de uma API para aplicativo de mensagens curtas(tweets)
 
